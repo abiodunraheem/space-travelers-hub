@@ -1,10 +1,8 @@
-import './App.css';
+import AllRouter from './router/Router';
 
 function App() {
   return (
-    <div className="App">
-      <h1>React group project</h1>
-    </div>
+    <AllRouter />
   );
 }
 
