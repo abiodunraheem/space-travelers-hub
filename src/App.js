@@ -1,8 +1,12 @@
+import Navbar from './components/layout/Navbar';
 import AllRouter from './router/Router';
 
 function App() {
   return (
-    <AllRouter />
+    <div>
+      <Navbar />
+      <AllRouter />
+    </div>
   );
 }
 
