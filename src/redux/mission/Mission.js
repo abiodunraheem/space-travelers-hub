@@ -1,9 +1,9 @@
 // Actions
 const ADD_MISSION = 'bookstore/mission/ADD_MISSION';
-// const REMOVE_MISSION = 'bookstore/mission/REMOVE_MISSION';
+const REMOVE_MISSION = 'bookstore/mission/REMOVE_MISSION';
 const DISPLAY_MISSION = 'bookstore/mission/DISPLAY_MISSION';
-// const LOADING_MISSION = 'bookstore/missions/LOADINGbOOK';
-// const NOT_LOADING_MISSION = 'bookstore/mission/NOT_LOADINGMISSION';
+const LOADING_MISSION = 'bookstore/missions/LOADING_MISSION';
+const NOT_LOADING_MISSION = 'bookstore/mission/NOT_LOADINGMISSION';
 
 // defining initial state
 const initialState = {
@@ -25,7 +25,29 @@ export const displayMissionFunction = () => async (dispatch) => {
 const missionReducer = (state = initialState, action) => {
   switch (action.payload) {
     case ADD_MISSION:
-      return [...state];
+      return {
+        ...state,
+        isLoading: false,
+        response: [],
+      };
+    case REMOVE_MISSION:
+      return {
+        ...state,
+        isLoading: false,
+        response: [],
+      };
+    case LOADING_MISSION:
+      return {
+        ...state,
+        isLoading: true,
+        response: [],
+      };
+    case NOT_LOADING_MISSION:
+      return {
+        ...state,
+        isLoading: false,
+        response: [],
+      };
     default:
       return state;
   }
