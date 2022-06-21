@@ -6,8 +6,21 @@ const propTypes = {};
 const defaultProps = {};
 
 const Mission = () => (
-  <div className={style.missionContainer}>
-    <h1>This is the Mission components</h1>
+  <div className={style.table}>
+    <div className={style.tablerow}>
+      <div className={style.tablehead}>Table Header</div>
+      <div className={style.tablehead}>Table Header</div>
+      <div className={style.tablehead}>Table Header</div>
+      <div className={style.tablehead}>Table Header</div>
+
+    </div>
+    <div className={style.tablerow}>
+      <div className={style.tablecell}>Table Cell</div>
+      <div className={style.tablecell}>Table Cell</div>
+      <div className={style.tablecell}>Table Cell</div>
+      <div className={style.tablecell}>Table Cell</div>
+
+    </div>
   </div>
 );
 
