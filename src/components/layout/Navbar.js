@@ -6,6 +6,11 @@ const Navbar = () => (
       <img src="" alt="" />
       <h1>Space Travellers Hub</h1>
     </div>
+    <ul>
+      <li>Rocket</li>
+      <li>Mission</li>
+      <li>My Profile</li>
+    </ul>
   </nav>
 );
 
