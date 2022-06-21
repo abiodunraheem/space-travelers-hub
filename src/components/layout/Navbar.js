@@ -1,8 +1,9 @@
 import React from 'react';
+import classes from './Navbar.module.css';
 
 const Navbar = () => (
-  <nav className="nav-bar">
-    <div className="header">
+  <nav className={classes.navbar}>
+    <div className={classes.header}>
       <img src="" alt="" />
       <h1>Space Travellers Hub</h1>
     </div>
