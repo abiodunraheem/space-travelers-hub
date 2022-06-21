@@ -1,4 +1,3 @@
-# space-travelers-hub
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Math magicians
