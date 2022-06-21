@@ -1,16 +1,25 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import classes from './Navbar.module.css';
+import logo from '../../image/Capture.PNG';
 
 const Navbar = () => (
   <nav className={classes.navbar}>
     <div className={classes.header}>
-      <img src="" alt="" />
-      <h1>Space Travellers Hub</h1>
+      <img src={logo} className={classes.logo} alt="log" />
+      <h1>
+        Space Traveller
+        <span className={classes.before}>
+          s
+        </span>
+        {' '}
+        Hub
+      </h1>
     </div>
-    <ul>
-      <li>Rocket</li>
-      <li>Mission</li>
-      <li>My Profile</li>
+    <ul className={classes.links_container}>
+      <li><NavLink to="/rocket">Rocket</NavLink></li>
+      <li><NavLink to="/rocket">Mission</NavLink></li>
+      <li><NavLink to="/rocket">My profile</NavLink></li>
     </ul>
   </nav>
 );
