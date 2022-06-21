@@ -3,6 +3,7 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
+import Myprofile from '../components/myprofile/Myprofile';
 import Home from '../components/Home';
 
 // #region constants
@@ -28,6 +29,7 @@ const defaultProps = {};
 const AllRouter = () => (
   <Routes>
     <Route exact path="/" element={<Home />} />
+    <Route exact path="/profile" element={<Myprofile />} />
   </Routes>
 );
 

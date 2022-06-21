@@ -8,7 +8,7 @@ const RocketsReducer = (state = initialRockets, action) => {
   switch (action.type) {
     case actions.FETCHROCKETS:
       return [
-        ...action.payLoad,
+        ...state, action.payLoad,
       ];
     case actions.BOOKROCKET:
       return [...state.map((rocket) => {

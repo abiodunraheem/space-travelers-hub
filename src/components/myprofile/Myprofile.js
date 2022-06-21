@@ -3,7 +3,9 @@ import './myprofile.css';
 
 const Myprofile = () => {
   const rockets = useSelector((state) => state.RocketsReducer);
-  const missions = useSelector((state) => state.missionReducer);
+  const missions = useSelector((state) => state.missionReducer.respnse);
+  console.log(missions)
+  console.log(rockets)
 
   return (
     <div className="myProfile">
