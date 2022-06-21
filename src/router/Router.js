@@ -4,6 +4,7 @@ import {
   Route,
 } from 'react-router-dom';
 import Home from '../components/Home';
+import Mission from '../components/mission/Mission';
 
 // #region constants
 
@@ -28,6 +29,8 @@ const defaultProps = {};
 const AllRouter = () => (
   <Routes>
     <Route exact path="/" element={<Home />} />
+    <Route exact path="/mission" element={<Mission />} />
+
   </Routes>
 );
 
