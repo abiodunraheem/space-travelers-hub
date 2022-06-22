@@ -26,7 +26,7 @@ const Mission = () => {
 
         </div>
         {missionList.response.map((el, index) => (
-          <div className={`${style.tablerow}`} style={index % 2 === 0 ? { backgroundColor: 'silver' } : { backgroundColor: 'white' }} key={el.mission_id}>
+          <div className={`${style.tablerow}`} style={index % 2 === 0 ? { backgroundColor: '#c0c0c07e' } : { backgroundColor: 'white' }} key={el.mission_id}>
             <div className={style.tablecell}><p className={style.btn}>{el.mission_name}</p></div>
             <div className={style.tablecell}>
               <p className={style.desk}>

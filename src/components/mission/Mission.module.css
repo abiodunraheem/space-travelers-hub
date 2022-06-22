@@ -1,39 +1,39 @@
 .table {
-    display: table;
-    border-collapse: collapse;
-    margin: 2rem 4%;
+  display: table;
+  border-collapse: collapse;
+  margin: 2rem 4%;
 }
 
 .tablerow {
-    display: table-row;
+  display: table-row;
 }
 
 .tablecell,
 .tablehead {
-    display: table-cell;
-    padding: 1rem;
-    border: #f0f0f0 1px solid;
+  display: table-cell;
+  padding: 1rem;
+  border: #f0f0f0 1px solid;
 }
 
 .tablehead {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .desk {
-    max-width: 55rem;
+  max-width: 55rem;
 }
 
 .btn {
-    max-width: 8rem;
+  max-width: 8rem;
 }
 
 .spinner {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.529);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.529);
 }

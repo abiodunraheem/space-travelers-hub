@@ -3,7 +3,7 @@
   justify-content: space-between;
   margin: 0 2rem;
   border-bottom: 2px solid silver;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 .header {
@@ -30,7 +30,7 @@
   margin-left: 1rem;
 }
 
-.links_container li>* {
+.links_container li > * {
   text-decoration: none;
   font-weight: bold;
 }
@@ -40,7 +40,7 @@
   padding-left: 0.3rem;
 }
 
-.links_container li>*:hover {
+.links_container li > *:hover {
   display: block;
   transform: translateY(-3px);
 }
