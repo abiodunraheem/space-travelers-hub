@@ -5,6 +5,7 @@ import {
 } from 'react-router-dom';
 import Home from '../components/Home';
 import Mission from '../components/mission/Mission';
+import Rocket from '../components/Rockets/rockets';
 
 // #region constants
 
@@ -30,7 +31,7 @@ const AllRouter = () => (
   <Routes>
     <Route exact path="/" element={<Home />} />
     <Route exact path="/mission" element={<Mission />} />
-
+    <Route exact path="/rocket" element={<Rocket />} />
   </Routes>
 );
 
