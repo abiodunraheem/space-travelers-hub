@@ -35,6 +35,7 @@ const Profile = () => {
           {rocketsList.map((el) => (
             <li key={el.rockets_id}><p>{el.rockets_name}</p></li>
           ))}
+          <li><p>grinade</p></li>
         </ul>
       </div>
     </div>
