@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Spinner } from 'react-spinners-css';
 import style from './Mission.module.css';
@@ -9,11 +9,16 @@ const propTypes = {};
 const defaultProps = {};
 
 const Mission = () => {
+  const [isMember, setMember] = useState(false);
   const dispatch = useDispatch();
   const missionList = useSelector((state) => state.missionReducer);
   useEffect(() => {
     dispatch(displayMissionFunction());
   }, []);
+  const handelIsMember = () => {
+    setMember((state) => !state);
+    console.log(isMember)
+  };
   return (
     <div>
       {missionList.isLoading && <div className={style.spinner}><Spinner color="#ffff" /></div>}
@@ -33,8 +38,8 @@ const Mission = () => {
                 {el.description}
               </p>
             </div>
-            <div className={style.tablecell}><button className={style.btn} type="button">Not a member</button></div>
-            <div className={style.tablecell}><button className={style.btn} type="button">Join mission</button></div>
+            <div className={`${style.tablecell} ${style.pad}`}><button className={style.btn} type="button">Not a member</button></div>
+            <div className={style.tablecell}><button className={style.btn} onClick={handelIsMember} type="button">Join mission</button></div>
 
           </div>
         ))}
