@@ -18,3 +18,7 @@
 .tablehead {
     font-weight: bold;
 }
+
+.desk {
+    max-width: 55rem;
+}
