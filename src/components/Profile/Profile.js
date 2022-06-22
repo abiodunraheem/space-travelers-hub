@@ -11,6 +11,8 @@ const defaultProps = {};
 const Profile = () => {
   const dispatch = useDispatch();
   const missionList = useSelector((state) => state.missionReducer.response);
+  const rocketsList = useSelector((state) => state.rocketReducer.response);
+  console.log(rocketsList)
   useEffect(() => {
     dispatch(displayMissionFunction());
   }, []);
@@ -30,8 +32,9 @@ const Profile = () => {
       <div className={style.myrocket}>
         <h1>My Mission</h1>
         <ul className={style.table}>
-          <li><p>grinade</p></li>
-          <li><p>grinade</p></li>
+        {rocketsList.map((el) => (
+            <li key={el.rockets_id}><p>{el.rockets_name}</p></li>
+          ))}
         </ul>
       </div>
     </div>
