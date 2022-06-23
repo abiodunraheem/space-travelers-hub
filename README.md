@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Space Travellers
+# Space Travellers Hub
 
 Space travellers is a project that lists information from the space-x Api about the space [rockets](https://api.spacexdata.com/v3/rockets) that they have and the [missions](https://api.spacexdata.com/v3/missions) that they have already done.
 
