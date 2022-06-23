@@ -1,58 +1,74 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Math magicians
+# Space Travellers
 
-> React group project
+Space travellers is a project that lists information from the space-x Api about the space [rockets](https://api.spacexdata.com/v3/rockets) that they have and the [missions](https://api.spacexdata.com/v3/missions) that they have already done.
+
+
+The project is interesting as it allows users to book rockets as well as join a mission that they feel they are interested in. All booked rockets and joined missions can be viewed from the myProfile page.
+
+
+Enjoy!
 
 ## Built With
 
--React Js
+- HTML5
+- CSS
+- Javascript
+- React
+- Redux
+- API
+- Webpack
+- Linters
+
+## Live Demo
 
 ## Getting Started
-
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+In your terminal, navigate to your current directory and run this code
 
-You need to have a git installed
-You need to have a basic knowledge about HTML and CSS
+`git@github.com:abiodunraheem/space-travelers-hub.git`
 
-### Setup
+Locate the directory in your file explorer
 
-#### clone this project (using git clone https://github.com/bizip/math_magicians.git) to your local computer and use telminal to navigate into the parent directory of this project.
+`cd space-travelers-hub`
 
-### Install
+Install npm or if installed already using this link
 
-#### Run npm install
+`npm install`
 
-### Usage
+Start the web dev server depending on your configuration
 
-run: npm start
+`npm start`
+
+The Project should now be live on your browser
+
+## Tests
+To run your tests you can run:
+- `npm test` for unit tests with the React testing library & Jest
+- `npx eslint .` for all your JavaScript based linter checks
+- `npx stylelint "**/*.{css,scss}"` for all your CSS based linter checks
 
 ## Authors
 
 👤 **Author1**
+- GitHub: [@Abiodunraheem](https://github.com/Abiodunraheem)
+- Twitter: [@abiodunraheem23](https://twitter.com/abiodunraheem23)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/abiodun-raheem)
 
-- GitHub: [@githubhandle](https://github.com/bizip)
-- Twitter: [@twitterhandle](https://twitter.com/BizimunguPasca9)
-- LinkedIn: [LinkedIn](www.linkedin.com/in/bizimungu)
+👤 **Author2**
 
-## 🤝 Contributing
+
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/abiodunraheem/space-travelers-hub/issues).
+
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
-
 ## 📝 License
 
 This project is [MIT](./MIT.md) licensed.
