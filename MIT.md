@@ -1,4 +1,4 @@
-## Copyright 2022, [Raheem Abiodun Bizimungul Pascal]
+## Copyright 2022, [Raheem Abiodun, and Bizimungul Pascal]
 
 ###### APP TYPE can be a webpage/website, a web app, a software and so on
 
