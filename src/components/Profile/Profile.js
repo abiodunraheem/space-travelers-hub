@@ -28,8 +28,6 @@ const Profile = () => {
           {missionList.map((el) => (
             <li key={el.id}><p>{el.name}</p></li>
           ))}
-
-          <li><p>grinade</p></li>
         </ul>
       </div>
       <div className={style.myrocket}>
@@ -38,7 +36,6 @@ const Profile = () => {
           {rocketsList.map((el) => (
             <li key={el.id}><p>{el.name}</p></li>
           ))}
-          <li><p>grinade</p></li>
         </ul>
       </div>
     </div>
