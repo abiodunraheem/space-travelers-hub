@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { FETCHROCKETS } from './actionTypes';
+import { BOOKROCKET, CANCELBOOKING, FETCHROCKETS } from './actionTypes';
 
 const baseURL = 'https://api.spacexdata.com/v3/rockets';
 
@@ -17,11 +17,37 @@ export const displayRocketFunction = () => async (dispatch) => {
   }
 };
 
+// Book a rocket
+export const RocketBooking = (id) => async (dispatch) => {
+  try {
+    return dispatch({ type: BOOKROCKET, payload: id });
+  } catch (err) {
+    return err;
+  }
+};
+
+// Cancel rocket reservation
+export const CancelRocketBooking = (id) => async (dispatch) => {
+  try {
+    return dispatch({ type: CANCELBOOKING, payload: id });
+  } catch (err) {
+    return err;
+  }
+};
+
 // reducer function
 const rocketReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCHROCKETS:
       return action.payLoad;
+    case BOOKROCKET:
+      return state.map((rocket) => (rocket.id === Number(action.payload)
+        ? { ...rocket, reserved: !rocket.reserved }
+        : { ...rocket }));
+    case CANCELBOOKING:
+      return state.map((rocket) => (rocket.id === Number(action.payload)
+        ? { ...rocket, reserved: !rocket.reserved }
+        : { ...rocket }));
     default:
       return state;
   }

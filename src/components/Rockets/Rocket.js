@@ -2,27 +2,22 @@
 import React from 'react';
 import Proptypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-// import { CancelRocketBooking, RocketBooking } from '../../redux/Rockets/rockets';
 import './rockets.css';
-
-const propTypes = {};
-
-const defaultProps = {};
+import { CancelRocketBooking, RocketBooking } from '../../redux/Rockets/rockets';
 
 const Rocket = (props) => {
+  const dispatch = useDispatch();
   const { rocket } = props;
   const {
-    id, name, description, image,
+    id, name, reserved, description, image,
   } = rocket;
-
-  const dispatch = useDispatch();
-
-  const handleBooking = () => {
-    // if (rocket.reserved) {
-    //   dispatch(CancelRocketBooking(rocket.id));
-    // } else {
-    //   dispatch(RocketBooking(rocket.id));
-    // }
+  const handleBooking = (e) => {
+    const { id } = e.target;
+    if (reserved) {
+      dispatch(CancelRocketBooking(id));
+    } else {
+      dispatch(RocketBooking(id));
+    }
   };
   return (
     <div id={id} className="rocket">
