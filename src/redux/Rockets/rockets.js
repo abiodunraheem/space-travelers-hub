@@ -46,4 +46,31 @@ const rocketReducer = (state = initialState, action) => {
   }
 };
 
+export const getRocketFromAPI = () => (dispatch) => fetch(baseURL)
+  .then((res) => res.json()).then((data) => {
+    const rockets = data.map((rocket) => ({
+      id: rocket.id,
+      name: rocket.rocket_name,
+      description: rocket.description,
+      image: rocket.flickr_images[0],
+      reserved: false,
+    }));
+    dispatch({ type: FETCHROCKETS, payLoad: rockets });
+  }).catch(() => { });
+
+// export const RocketBooking = (id) => ({
+//   type: BOOKROCKET,
+//   payLoad: id,
+// });
+
+// export const CancelRocketBooking = (id) => ({
+//   type: actions.CANCELBOOKING,
+//   payLoad: id,
+// });
+
+// export const addRocketToMyProfile = (id) => ({
+//   type: action.ADDROCKETNAME,
+//   payLoad: id,
+// });
+
 export default rocketReducer;
