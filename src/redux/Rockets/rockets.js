@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { BOOKROCKET, CANCELBOOKING, FETCHROCKETS } from './actionTypes';
 
 const baseURL = 'https://api.spacexdata.com/v3/rockets';
@@ -8,14 +7,6 @@ const initialState = [];
 
 // Action creattor
 // Action creator function that will display data once it is dispatched
-export const displayRocketFunction = () => async (dispatch) => {
-  try {
-    const res = await axios.get(baseURL);
-    return dispatch({ type: FETCHROCKETS, payload: res.data });
-  } catch (err) {
-    return err;
-  }
-};
 
 // Book a rocket
 export const RocketBooking = (id) => async (dispatch) => {

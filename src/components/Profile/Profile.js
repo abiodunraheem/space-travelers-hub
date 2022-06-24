@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 // import { Spinner } from 'react-spinners-css';
 import style from './Profile.module.css';
 import { displayMissionFunction } from '../../redux/mission/Mission';
+import { getRocketFromAPI } from '../../redux/Rockets/rockets';
 
 const propTypes = {};
 
@@ -10,12 +11,14 @@ const defaultProps = {};
 
 const Profile = () => {
   const dispatch = useDispatch();
-  const missionList = useSelector((state) => state.missionReducer.response);
-  const rocketsList = useSelector((state) => state.rocketReducer.response);
-  console.log(rocketsList)
   useEffect(() => {
     dispatch(displayMissionFunction());
+    dispatch(getRocketFromAPI());
   }, []);
+
+  const missionList = useSelector((state) => state.missionReducer);
+  const rocketsList = useSelector((state) => state.RocketsReducer);
+
   return (
 
     <div className={style.myprofile}>
@@ -33,7 +36,7 @@ const Profile = () => {
         <h1>My Mission</h1>
         <ul className={style.table}>
           {rocketsList.map((el) => (
-            <li key={el.rockets_id}><p>{el.rockets_name}</p></li>
+            <li key={el.id}><p>{el.name}</p></li>
           ))}
           <li><p>grinade</p></li>
         </ul>
