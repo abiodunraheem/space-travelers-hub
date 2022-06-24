@@ -1,13 +1,19 @@
-import React from 'react';
-import { HashRouter as Router } from 'react-router-dom';
-import renderer from 'react-test-renderer';
+import { Provider } from 'react-redux';
+import { render, screen } from '@testing-library/react';
 import Rocket from './Rocket';
+import '@testing-library/jest-dom';
+import store from '../../redux/ConfigureStore';
 
-describe('Test mission component', () => {
+const MockRocketComponent = () => (
+  <Provider store={store}>
+    <Rocket />
+  </Provider>
+);
+
+describe('Test for rocket component', () => {
   it('It should render rocket component', () => {
-    const rocket = renderer
-      .create(<Router><Rocket /></Router>)
-      .toJSON();
-    expect(rocket).toMatchSnapshot();
+    render(<MockRocketComponent />);
+    const rocketsData = screen.getByText('Rocket');
+    expect(rocketsData).toBeInTheDocument();
   });
 });
