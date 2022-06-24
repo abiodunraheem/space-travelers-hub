@@ -1,22 +1,35 @@
 import axios from 'axios';
-import { FETCHROCKETS, LOADROCKET, NOTLOADINGROCKET } from './actionTypes';
+import { BOOKROCKET, CANCELBOOKING, FETCHROCKETS } from './actionTypes';
 
 const baseURL = 'https://api.spacexdata.com/v3/rockets';
 
 // defining initial state
-const initialState = {
-  isLoading: false,
-  response: [],
-};
+const initialState = [];
 
 // Action creattor
 // Action creator function that will display data once it is dispatched
 export const displayRocketFunction = () => async (dispatch) => {
   try {
-    dispatch({ type: LOADROCKET });
     const res = await axios.get(baseURL);
-    dispatch({ type: NOTLOADINGROCKET });
     return dispatch({ type: FETCHROCKETS, payload: res.data });
+  } catch (err) {
+    return err;
+  }
+};
+
+// Book a rocket
+export const RocketBooking = (id) => async (dispatch) => {
+  try {
+    return dispatch({ type: BOOKROCKET, payload: id });
+  } catch (err) {
+    return err;
+  }
+};
+
+// Cancel rocket reservation
+export const CancelRocketBooking = (id) => async (dispatch) => {
+  try {
+    return dispatch({ type: CANCELBOOKING, payload: id });
   } catch (err) {
     return err;
   }
@@ -26,24 +39,30 @@ export const displayRocketFunction = () => async (dispatch) => {
 const rocketReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCHROCKETS:
-      return {
-        ...state,
-        isLoading: false,
-        response: action.payload,
-      };
-    case LOADROCKET:
-      return {
-        ...state,
-        isLoading: true,
-      };
-    case NOTLOADINGROCKET:
-      return {
-        ...state,
-        isLoading: false,
-      };
+      return action.payLoad;
+    case BOOKROCKET:
+      return state.map((rocket) => (rocket.id === Number(action.payload)
+        ? { ...rocket, reserved: !rocket.reserved }
+        : { ...rocket }));
+    case CANCELBOOKING:
+      return state.map((rocket) => (rocket.id === Number(action.payload)
+        ? { ...rocket, reserved: !rocket.reserved }
+        : { ...rocket }));
     default:
       return state;
   }
 };
+
+export const getRocketFromAPI = () => (dispatch) => fetch(baseURL)
+  .then((res) => res.json()).then((data) => {
+    const rockets = data.map((rocket) => ({
+      id: rocket.id,
+      name: rocket.rocket_name,
+      description: rocket.description,
+      image: rocket.flickr_images[0],
+      reserved: false,
+    }));
+    dispatch({ type: FETCHROCKETS, payLoad: rockets });
+  }).catch(() => { });
 
 export default rocketReducer;

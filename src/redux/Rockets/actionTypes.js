@@ -1,3 +1,4 @@
 export const FETCHROCKETS = 'FETCHROCKETS';
-export const LOADROCKET = 'bookRocket';
-export const NOTLOADINGROCKET = 'CancelBooking';
+export const BOOKROCKET = 'bookRocket';
+export const CANCELBOOKING = 'CancelBooking';
+export const ADDROCKETNAME = 'addrocketname';
