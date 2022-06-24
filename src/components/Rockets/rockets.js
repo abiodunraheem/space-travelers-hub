@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-import { shallowEqual, useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { getRocketFromAPI } from '../../redux/Rockets/rockets';
 import Rocket from './Rocket';
 
 const Rockets = () => {
-  const rockets = useSelector((state) => state.RocketsReducer, shallowEqual);
+  const rockets = useSelector((state) => state.RocketsReducer);
   const dispatch = useDispatch();
   useEffect(() => {
     if (document.querySelector('.roch').children.length === 0) dispatch(getRocketFromAPI());
