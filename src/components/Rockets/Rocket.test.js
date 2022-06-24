@@ -1,12 +1,12 @@
 import React from 'react';
 import { HashRouter as Router } from 'react-router-dom';
 import renderer from 'react-test-renderer';
-import Mission from './Mission';
+import Rocket from './Rocket';
 
 describe('Test mission component', () => {
-  it('It should render mission component', () => {
-    const mission = renderer
-      .create(<Router><Mission /></Router>)
+  it('It should render rocket component', () => {
+    const rocket = renderer
+      .create(<Router><Rocket /></Router>)
       .toJSON();
     expect(mission).toMatchSnapshot();
   });
