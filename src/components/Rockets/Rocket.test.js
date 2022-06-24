@@ -8,6 +8,6 @@ describe('Test mission component', () => {
     const rocket = renderer
       .create(<Router><Rocket /></Router>)
       .toJSON();
-    expect(mission).toMatchSnapshot();
+    expect(rocket).toMatchSnapshot();
   });
 });
