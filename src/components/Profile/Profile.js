@@ -10,7 +10,8 @@ const defaultProps = {};
 
 const Profile = () => {
   const dispatch = useDispatch();
-  const missionList = useSelector((state) => state.missionReducer.response);
+  const missionList = useSelector((state) => state.missionReducer);
+  console.log(missionList);
   useEffect(() => {
     dispatch(displayMissionFunction());
   }, []);
@@ -21,7 +22,7 @@ const Profile = () => {
         <h1>My Mission</h1>
         <ul className={style.table}>
           {missionList.map((el) => (
-            <li key={el.mission_id}><p>{el.mission_name}</p></li>
+            <li key={el.id}><p>{el.name}</p></li>
           ))}
 
           <li><p>grinade</p></li>
