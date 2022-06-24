@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the navigation bar section It should render the navigation bar 1`] = `
+<nav
+  className="navbar"
+>
+  <div
+    className="header"
+  >
+    <a
+      aria-current="page"
+      className="active"
+      href="#/"
+      onClick={[Function]}
+    >
+      <img
+        alt="log"
+        className="logo"
+        src="planet.png"
+      />
+    </a>
+    <h1>
+      Space Traveller
+      <span
+        className="before"
+      >
+        s
+      </span>
+       
+      Hub
+    </h1>
+  </div>
+  <ul
+    className="links_container"
+  >
+    <li>
+      <a
+        className=""
+        href="#/rocket"
+        onClick={[Function]}
+      >
+        Rocket
+      </a>
+    </li>
+    <li>
+      <a
+        className=""
+        href="#/mission"
+        onClick={[Function]}
+      >
+        Mission
+      </a>
+    </li>
+    <li>
+      <a
+        className=""
+        href="#/profile"
+        onClick={[Function]}
+      >
+        My profile
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
