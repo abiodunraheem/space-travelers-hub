@@ -1,9 +1,13 @@
 /* eslint-disable react/prop-types */
-import './rockets.css';
 import React from 'react';
 import Proptypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 // import { CancelRocketBooking, RocketBooking } from '../../redux/Rockets/rockets';
+import './rockets.css';
+
+const propTypes = {};
+
+const defaultProps = {};
 
 const Rocket = (props) => {
   const { rocket } = props;
