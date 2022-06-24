@@ -1,13 +1,19 @@
-import React from 'react';
-import { HashRouter as Router } from 'react-router-dom';
-import renderer from 'react-test-renderer';
+import { Provider } from 'react-redux';
+import { render, screen } from '@testing-library/react';
 import Mission from './Mission';
+import '@testing-library/jest-dom';
+import store from '../../redux/ConfigureStore';
 
-describe('Test mission component', () => {
+const MockMissionComponent = () => (
+  <Provider store={store}>
+    <Mission />
+  </Provider>
+);
+
+describe('Test for mission component', () => {
   it('It should render mission component', () => {
-    const mission = renderer
-      .create(<Router><Mission /></Router>)
-      .toJSON();
-    expect(mission).toMatchSnapshot();
+    render(<MockMissionComponent />);
+    const missionsData = screen.getByText('Mission');
+    expect(missionsData).toBeInTheDocument();
   });
 });
