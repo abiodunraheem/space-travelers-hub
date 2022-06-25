@@ -1,4 +1,4 @@
-export const FETCHROCKETS = 'FETCHROCKETS';
-export const BOOKROCKET = 'bookRocket';
-export const CANCELBOOKING = 'CancelBooking';
-export const ADDROCKETNAME = 'addrocketname';
+export const FETCHROCKETS = 'space/rocket/FETCHROCKETS';
+export const BOOKROCKET = 'space/rocket/BOOKROCKET';
+export const CANCELBOOKING = 'space/rocket/CANCELBOOKING';
+export const ADDROCKETNAME = 'space/rocket/ADDROCKETNAME';
