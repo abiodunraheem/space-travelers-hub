@@ -60,7 +60,9 @@ To run your tests you can run:
 
 👤 **Author2**
 
-
+- GitHub: [@githubhandle](https://github.com/bizip)
+- Twitter: [@twitterhandle](https://twitter.com/BizimunguPasca9)
+- LinkedIn: [LinkedIn](www.linkedin.com/in/bizimungu)
 
 Contributions, issues, and feature requests are welcome!
 
