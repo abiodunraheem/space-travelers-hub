@@ -24,13 +24,7 @@ export const missionStatusFunction = (id) => (dispatch) => {
 export const displayMissionFunction = () => async (dispatch) => {
   try {
     const res = await axios.get(url);
-    const result = res.data.map((missions) => ({
-      id: missions.mission_id,
-      description: missions.description,
-      name: missions.mission_name,
-      active: false,
-    }));
-    return dispatch({ type: DISPLAY_MISSION, payload: result });
+    return dispatch({ type: DISPLAY_MISSION, payload: res.data });
   } catch (err) {
     return err;
   }
@@ -40,7 +34,8 @@ export const displayMissionFunction = () => async (dispatch) => {
 const missionReducer = (state = initialState, action) => {
   switch (action.type) {
     case DISPLAY_MISSION:
-      return action.payload;
+      console.log(action.payload);
+      return action.payload.map((mission) => ({ ...mission, active: false }));
     case LOADING_MISSION:
       return {
         ...state,
@@ -52,7 +47,7 @@ const missionReducer = (state = initialState, action) => {
         isLoading: false,
       };
     case MISSION_STATUS:
-      return state.map((mission) => (mission.id === action.payload
+      return state.map((mission) => (mission.mission_id === action.payload
         ? { ...mission, active: !mission.active }
         : { ...mission }));
     default:

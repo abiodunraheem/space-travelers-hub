@@ -29,8 +29,8 @@ const Mission = () => {
           <div className={style.tablehead}> </div>
         </div>
         {missionList.map((el, index) => (
-          <div className={`${style.tablerow}`} style={index % 2 === 0 ? { backgroundColor: '#c0c0c07e' } : { backgroundColor: 'white' }} key={el.id}>
-            <div className={style.tablecell}><p className={style.btn}>{el.name}</p></div>
+          <div className={`${style.tablerow}`} style={index % 2 === 0 ? { backgroundColor: '#c0c0c07e' } : { backgroundColor: 'white' }} key={el.mission_id}>
+            <div className={style.tablecell}><p className={style.btn}>{el.mission_name}</p></div>
             <div className={style.tablecell}>
               <p className={style.desk}>
                 {el.description}
@@ -39,7 +39,7 @@ const Mission = () => {
             <div className={`${style.tablecell} ${style.pad}`}>
               <button className={`${el.active ? style.activeMember : style.notMember} ${style.btn}`} type="button">{el.active ? 'Active Member' : 'Not a member'}</button>
             </div>
-            <div className={style.tablecell}><button className={`${el.active ? style.activeMemberbtn : style.notactiveMemberBtn} ${style.btn}`} onClick={handelIsMember} id={el.id} type="button">{el.active ? 'Cancel mission' : 'Join mission'}</button></div>
+            <div className={style.tablecell}><button className={`${el.active ? style.activeMemberbtn : style.notactiveMemberBtn} ${style.btn}`} onClick={handelIsMember} id={el.mission_id} type="button">{el.active ? 'Cancel mission' : 'Join mission'}</button></div>
 
           </div>
         ))}
