@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+<div
+  className="myprofile"
+>
+  <div
+    className="mymission"
+  >
+    <h1>
+      My Mission
+    </h1>
+    <ul
+      className="table"
+    />
+  </div>
+  <div
+    className="myrocket"
+  >
+    <h1>
+      My Mission
+    </h1>
+    <ul
+      className="table"
+    />
+  </div>
+</div>
+`;
+
+exports[`Button component render 1`] = `
+<div
+  className="myprofile"
+>
+  <div
+    className="mymission"
+  >
+    <h1>
+      My Mission
+    </h1>
+    <ul
+      className="table"
+    />
+  </div>
+  <div
+    className="myrocket"
+  >
+    <h1>
+      My Mission
+    </h1>
+    <ul
+      className="table"
+    />
+  </div>
+</div>
+`;
+
+exports[`Profile should  1`] = `
+<div
+  className="myprofile"
+>
+  <div
+    className="mymission"
+  >
+    <h1>
+      My Mission
+    </h1>
+    <ul
+      className="table"
+    />
+  </div>
+  <div
+    className="myrocket"
+  >
+    <h1>
+      My Mission
+    </h1>
+    <ul
+      className="table"
+    />
+  </div>
+</div>
+`;
+
+exports[`Profile should render 1`] = `
+<div
+  className="myprofile"
+>
+  <div
+    className="mymission"
+  >
+    <h1>
+      My Mission
+    </h1>
+    <ul
+      className="table"
+    />
+  </div>
+  <div
+    className="myrocket"
+  >
+    <h1>
+      My Mission
+    </h1>
+    <ul
+      className="table"
+    />
+  </div>
+</div>
+`;

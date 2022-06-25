@@ -8,38 +8,36 @@ import { CancelRocketBooking, RocketBooking } from '../../redux/Rockets/rockets'
 const Rocket = (props) => {
   const dispatch = useDispatch();
   const { rocket } = props;
-  const {
-    id, name, reserved, description, image,
-  } = rocket;
+
   const handleBooking = (e) => {
     const { id } = e.target;
-    if (reserved) {
+    if (rocket.reserved) {
       dispatch(CancelRocketBooking(id));
     } else {
       dispatch(RocketBooking(id));
     }
   };
   return (
-    <div id={id} className="rocket">
+    <div id={rocket.id} className="rocket">
       <div className="rocketLeft">
-        <img src={image} alt="rocket" />
+        <img src={rocket.image} alt="rocket" />
       </div>
       <div className="rocketRight">
-        <h2>{name}</h2>
+        <h2>{rocket.name}</h2>
         {rocket.reserved
           ? (
             <>
               <p>
                 <small className="reservedbtn">Reserved</small>
-                {description}
+                {rocket.description}
               </p>
-              <button className="cancelReserve" onClick={handleBooking} id={id} type="button">Cancel Reservation</button>
+              <button className="cancelReserve" onClick={handleBooking} id={rocket.id} type="button">Cancel Reservation</button>
             </>
           )
           : (
             <>
-              <p>{description}</p>
-              <button onClick={handleBooking} id={id} type="button">Reserve Rocket</button>
+              <p>{rocket.description}</p>
+              <button onClick={handleBooking} id={rocket.id} type="button">Reserve Rocket</button>
             </>
           )}
       </div>
