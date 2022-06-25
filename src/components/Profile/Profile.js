@@ -1,32 +1,20 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import style from './Profile.module.css';
 import MyMissions from './MyMissions';
+import MyRockets from './MyRockets';
 
 const propTypes = {};
 
 const defaultProps = {};
 
-const Profile = () => {
-  const rocketsList = useSelector((state) => state.RocketsReducer);
-
-  return (
-    <>
+const Profile = () => (
+  <>
+    <div className={style.myprofile}>
       <MyMissions />
-      <div className={style.myprofile}>
-
-        <div className={style.myrocket}>
-          <h1>My Mission</h1>
-          <ul className={style.table}>
-            {rocketsList.map((el) => (
-              <li key={el.id}><p>{el.name}</p></li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </>
-  );
-};
+      <MyRockets />
+    </div>
+  </>
+);
 
 Profile.propTypes = propTypes;
 Profile.defaultProps = defaultProps;

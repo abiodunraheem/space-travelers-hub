@@ -19,7 +19,6 @@ const Navbar = () => (
     <ul className={classes.links_container}>
       <li>
         <NavLink
-          exact
           style={({ isActive }) => ({
             color: 'rgb(37, 150, 190)',
             textDecoration: isActive ? 'underline' : 'none',

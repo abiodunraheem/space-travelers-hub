@@ -34,7 +34,6 @@ export const displayMissionFunction = () => async (dispatch) => {
 const missionReducer = (state = initialState, action) => {
   switch (action.type) {
     case DISPLAY_MISSION:
-      console.log(action.payload);
       return action.payload.map((mission) => ({ ...mission, active: false }));
     case LOADING_MISSION:
       return {
