@@ -17,9 +17,9 @@ const defaultProps = {};
 const AllRouter = () => (
   <Routes>
     <Route exact path="/" element={<Rocket />} />
-    <Route exact path="/mission" element={<Mission />} />
-    <Route exact path="/rocket" element={<Rocket />} />
-    <Route exact path="/profile" element={<Profile />} />
+    <Route path="/mission" element={<Mission />} />
+    <Route path="/rocket" element={<Rocket />} />
+    <Route path="/profile" element={<Profile />} />
 
   </Routes>
 );

@@ -17,9 +17,40 @@ const Navbar = () => (
       </h1>
     </div>
     <ul className={classes.links_container}>
-      <li><NavLink to="/rocket">Rocket</NavLink></li>
-      <li><NavLink to="/mission">Mission</NavLink></li>
-      <li><NavLink to="/profile">My profile</NavLink></li>
+      <li>
+        <NavLink
+          exact
+          style={({ isActive }) => ({
+            color: 'rgb(37, 150, 190)',
+            textDecoration: isActive ? 'underline' : 'none',
+          })}
+          to="/rocket"
+        >
+          Rocket
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/mission"
+          style={({ isActive }) => ({
+            color: 'rgb(37, 150, 190)',
+            textDecoration: isActive ? 'underline' : 'none',
+          })}
+        >
+          Mission
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/profile"
+          style={({ isActive }) => ({
+            color: 'rgb(37, 150, 190)',
+            textDecoration: isActive ? 'underline' : 'none',
+          })}
+        >
+          My profile
+        </NavLink>
+      </li>
     </ul>
   </nav>
 );
