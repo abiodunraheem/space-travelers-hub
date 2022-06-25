@@ -9,11 +9,8 @@ const propTypes = {};
 const defaultProps = {};
 
 const Mission = () => {
-  // const [isMember, setMember] = useState(false);
   const dispatch = useDispatch();
   const missionList = useSelector((state) => state.missionReducer);
-  // const isMember = useSelector((state) => state.missionReducer);
-  // console.log(isMember);
   useEffect(() => {
     if (!missionList.length) dispatch(displayMissionFunction());
   }, []);
