@@ -6,7 +6,7 @@ import logo from '../../image/planet.png';
 const Navbar = () => (
   <nav className={classes.navbar}>
     <div className={classes.header}>
-      
+      <NavLink to="/"><img src={logo} className={classes.logo} alt="log" /></NavLink>
       <h1>
         Space Traveller
         <span className={classes.before}>
