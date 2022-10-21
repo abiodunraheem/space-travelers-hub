@@ -16,15 +16,6 @@ jest.mock('./Rocket', () => (props) => {
   return <mock-childComponent />;
 });
 
-test('If ParentComponent is passed open and has data, ChildComponent is called with prop open and data', () => {
-  render(<MockMissionComponent open rocket="some data" />);
-  expect(mockChildComponent).not.toHaveBeenCalledWith(
-    expect.objectContaining({
-      open: true,
-      rocket: 'some data',
-    }),
-  );
-});
 
 test('If ParentComponent is not passed open, ChildComponent is not called', () => {
   render(<MockMissionComponent />);
