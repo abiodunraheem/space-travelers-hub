@@ -30,3 +30,28 @@ export const displayMissionFunction = () => async (dispatch) => {
   }
 };
 
+// reducer function
+const missionReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case DISPLAY_MISSION:
+      return action.payload.map((mission) => ({ ...mission, active: false }));
+    case LOADING_MISSION:
+      return {
+        ...state,
+        isLoading: true,
+      };
+    case NOT_LOADING_MISSION:
+      return {
+        ...state,
+        isLoading: false,
+      };
+    case MISSION_STATUS:
+      return state.map((mission) => (mission.mission_id === action.payload
+        ? { ...mission, active: !mission.active }
+        : { ...mission }));
+    default:
+      return state;
+  }
+};
+
+export default missionReducer;
