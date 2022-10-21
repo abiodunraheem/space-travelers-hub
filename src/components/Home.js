@@ -9,7 +9,7 @@ const defaultProps = {};
  */
 const Home = () => (
   <div>
-    <h1>Welcome to the home page</h1>
+    <h1>Welcome to space trallers hub</h1>
   </div>
 );
 
