@@ -8,14 +8,7 @@ const Rocket = (props) => {
   const dispatch = useDispatch();
   const { rocket } = props;
 
-  const handleBooking = (e) => {
-    const { id } = e.target;
-    if (rocket.reserved) {
-      dispatch(CancelRocketBooking(id));
-    } else {
-      dispatch(RocketBooking(id));
-    }
-  };
+  
   return (
     <div id={rocket.id} className="rocket">
       <div className="rocketLeft">
