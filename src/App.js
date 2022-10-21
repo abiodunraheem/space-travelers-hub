@@ -4,7 +4,7 @@ import AllRouter from './router/Router';
 function App() {
   return (
     <div>
-      
+      <Navbar />
       <AllRouter />
     </div>
   );
