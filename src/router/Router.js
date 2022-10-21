@@ -28,4 +28,3 @@ AllRouter.propTypes = propTypes;
 AllRouter.defaultProps = defaultProps;
 // #endregion
 
-export default AllRouter;
