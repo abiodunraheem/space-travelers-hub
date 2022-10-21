@@ -6,4 +6,7 @@ const allReducer = combineReducers({
   missionReducer,
   RocketsReducer,
 });
-
+const store = configureStore({
+  reducer: allReducer,
+});
+export default store;
