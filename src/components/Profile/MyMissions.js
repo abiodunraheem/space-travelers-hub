@@ -8,7 +8,7 @@ const MyMissions = () => {
   );
   return (
     <div className={style.mymission}>
-      
+      <h1>My Mission</h1>
       <ul className={style.table}>
         {missionList.length > 0 && missionList.map((el) => (
           <li key={el.mission_id}><p>{el.mission_name}</p></li>
