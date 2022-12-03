@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/abiodun-react-portfolio/static/css/main.e68e9cb5.css",
+    "main.js": "/abiodun-react-portfolio/static/js/main.54987731.js",
+    "static/js/787.dfcb280b.chunk.js": "/abiodun-react-portfolio/static/js/787.dfcb280b.chunk.js",
+    "index.html": "/abiodun-react-portfolio/index.html",
+    "main.e68e9cb5.css.map": "/abiodun-react-portfolio/static/css/main.e68e9cb5.css.map",
+    "main.54987731.js.map": "/abiodun-react-portfolio/static/js/main.54987731.js.map",
+    "787.dfcb280b.chunk.js.map": "/abiodun-react-portfolio/static/js/787.dfcb280b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e68e9cb5.css",
+    "static/js/main.54987731.js"
+  ]
+}
